@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 public class DetailActivity extends ActionBarActivity {
 
 
@@ -92,26 +91,33 @@ public class DetailActivity extends ActionBarActivity {
         @Override
         public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
             super.onCreateOptionsMenu(menu, inflater);
-            getActivity().getMenuInflater().inflate(R.menu.detail,menu);
-            MenuItem menuItem = menu.findItem(R.id.share_menu);
+            getActivity().getMenuInflater().inflate(R.menu.detail_fragment, menu);
+            MenuItem menuItem = menu.findItem(R.id.action_share);
              //Get the provider and hold onto it to set/change the share intent.
-            mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
+            mShareActionProvider = new ShareActionProvider(getActivity());
+            mShareActionProvider.setShareIntent(creatintent());
+            MenuItemCompat.setActionProvider(menuItem, mShareActionProvider);
 
 
 
         }
 
+        public Intent creatintent() {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+            sendIntent.setType("text/plain");
+            return sendIntent;
+        }
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
-            if(id == R.id.share_menu)
+            if (id == R.id.action_share)
             {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT,text);
-                sendIntent.setType("text/plain");
+
                // startActivity(sendIntent);
-                setShareIntent(sendIntent);
+                setShareIntent(creatintent());
                 Log.e("fin me", "onOptionsItemSelected: ");
 
             }
