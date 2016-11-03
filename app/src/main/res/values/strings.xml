@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sunshine</string>
+    <string name="Rfreash">Refresh</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_location_key" translatable="false">Location</string>
+    <string name="pref_location_label">Location</string>
+    <string name="pref_location_defult" translatable="false">21634,eg</string>
+    <string name="Tempture_Uint_tilte">Tempture Uint</string>
+    <string name="Temture_Unit_key">unit</string>
+    <string name="Metric" translatable="false">Metric</string>
+    <string name="Imperial" translatable="false">Imperial</string>
+    <string name="Temture_Unit_default">@string/Metric</string>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="showMap">Show Map</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+
+
+
+
+
+</resources>

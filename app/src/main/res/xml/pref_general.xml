@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:title="@string/title_activity_settings">
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/Tempture_unit"
+        android:entryValues="@array/Tempture_vis"
+        android:key="@string/Temture_Unit_key"
+        android:title="@string/Tempture_Uint_tilte" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_location_defult"
+        android:inputType="text"
+        android:key="@string/pref_location_key"
+        android:singleLine="true"
+        android:title="@string/pref_location_label"/>
+
+
+
+
+</PreferenceScreen>
