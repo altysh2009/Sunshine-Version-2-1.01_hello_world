@@ -27,11 +27,7 @@ import android.preference.PreferenceManager;
            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_location_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.Temture_Unit_key)));
             // Add 'general' preferences, defined in the XML file
-            // TODO: Add preferences from XML
 
-            // For all preferences, attach an OnPreferenceChangeListener so the UI summary can be
-            // updated when the preference changes.
-            // TODO: Add preferences
         }
 
         /**

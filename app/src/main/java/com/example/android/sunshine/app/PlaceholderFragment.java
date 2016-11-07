@@ -29,9 +29,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public  class PlaceholderFragment extends Fragment {
+    final String API_WEATHER = "http://api.openweathermap.org/data/2.5/forecast/daily";
     ArrayList<String> list = new ArrayList<String>();
     View root ;
-    final String API_WEATHER = "http://api.openweathermap.org/data/2.5/forecast/daily";
     String zipcode = "";
     String unittype = "";
     String durtation = "";
@@ -40,6 +40,7 @@ public  class PlaceholderFragment extends Fragment {
         for(int i = 0; i < 10; i++)
             list.add(" hallo");
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
